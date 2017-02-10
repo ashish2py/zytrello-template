@@ -1,0 +1,60 @@
+/* primary colors  */
+.primary-dark-color{
+    color : #11B0FF;
+}
+
+.primary-lighter-dark-color{
+    color: #F3F7F8;
+}
+
+.primary-link-color{
+    color: #65B6DA;
+}
+
+.navbar-brand, .primary-light-color{
+    color: #ffffff !important;
+}
+
+
+/* background colors  */
+.navbar-inverse, .primary-dark-background{
+    background-color:#11B0FF;
+    color: #ffffff;
+}
+
+.primary-lighter-dark-background{
+    background-color: #F3F7F8;
+}
+
+.primary-lighter-gray-background{
+    background-color: #F6F7FB;
+}
+
+.primary-light-background{
+    color: #ffffff !important;
+}
+
+
+.rounded-corner{
+    border-radius: 3px;
+}
+
+body, .primary-light-background{
+    background-color: #ffffff;
+}
+
+
+/* login panel css */
+.login-panel{
+    margin:50px 30px 50px 30px;
+    padding:10px;
+}
+
+.login-panel > .form-horizontal > .form-group{
+    margin-top: 10px;
+}
+
+img .login-avatar{
+    border-radius: 50%;
+}
+/* end of login css */

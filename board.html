@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zaya Login Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://bootswatch.com/paper/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/board.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+    </style>
+
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+</head>
+
+<body class="primary-lighter-gray-background">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="text-center">
+                <a class="navbar-brand" href="#"><i class="fa fa-user-circle"></i> Padhna </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="pull-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                    <li>
+                        <a href="signup.html">Signup</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Page Content -->
+    <div class="container-fluid board">
+        <div class="row">
+            <div class="col-lg-4 board-head-container">
+                <i class="fa fa-file-code-o fa-2x"></i>
+                <span class="board-heading"> Planner Board</span>
+                <small><i>course planner</i></small>
+            </div>
+        </div>
+        <div class="row ">
+
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><i class="text-primary fa fa-circle-o"> </i> Backend Course</div>
+                    <div class="panel-body">
+
+                        <ul id="sortable2" class="connectedSortable list-unstyled board-panel-scroll">
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-red card-label"> </span>
+                                        <span class="card-label-blue card-label"> </span>
+                                        <span class="card-label-green card-label">  </span>
+                                    </div>
+                                    <div class="panel-sub-heading">Python</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-primary btn-xsm disabled">AT</a>
+                                            <a href="#" class="btn btn-danger btn-xsm disabled">PM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                            <span class="card-label-red card-label"> </span>
+                                    </div>
+                                    <div class="panel-sub-heading">Django</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-success btn-xsm disabled">RD</a>
+                                            <a href="#" class="btn btn-default btn-xsm disabled">ND</a>
+                                            <a href="#" class="btn btn-warning btn-xsm disabled">HS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-green card-label">  </span>
+                                    </div>
+                                    <div class="panel-sub-heading">MySQL</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-primary btn-xsm disabled">AT</a>
+                                            <a href="#" class="btn btn-danger btn-xsm disabled">PM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-red card-label"> </span>
+                                        <span class="card-label-blue card-label"> </span>
+                                    </div>
+                                    <div class="panel-sub-heading">ROR</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-default btn-xsm disabled">ND</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"> <i class="text-danger fa fa-circle-o"> </i> Frontend Course</div>
+                    <div class="panel-body">
+                        <ul id="sortable2" class="connectedSortable list-unstyled">
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-red card-label"> </span>
+                                        <span class="card-label-blue card-label"> </span>
+                                        <span class="card-label-green card-label">  </span>
+                                    </div>
+                                    <div class="panel-sub-heading">AngularJS</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-primary btn-xsm disabled">AT</a>
+                                            <a href="#" class="btn btn-danger btn-xsm disabled">PM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-green card-label">  </span>
+                                    </div>
+                                    <div class="panel-sub-heading">CSS</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-warning btn-xsm disabled">HS</a>
+                                            <a href="#" class="btn btn-default btn-xsm disabled">ND</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-red card-label"> </span>
+                                    </div>
+                                    <div class="panel-sub-heading">HTML</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-success btn-xsm disabled">RD</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-blue card-label"> </span>
+                                    </div>
+                                    <div class="panel-sub-heading">VueJS</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-default btn-xsm disabled">ND</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"> <i class="text-success fa fa-circle-o"> </i> Timepass Course</div>
+                    <div class="panel-body">
+                        <ul id="sortable2" class="connectedSortable list-unstyled">
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-red card-label"> </span>
+                                        <span class="card-label-blue card-label"> </span>
+                                        <span class="card-label-green card-label">  </span>
+                                    </div>
+                                    <div class="panel-sub-heading">SEO</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-default btn-xsm disabled">AT</a>
+                                            <a href="#" class="btn btn-default btn-xsm disabled">PM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-green card-label">  </span>
+                                    </div>
+                                    <div class="panel-sub-heading">Store locator</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-default btn-xsm disabled">AT</a>
+                                            <a href="#" class="btn btn-default btn-xsm disabled">PM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-red card-label"> </span>
+                                    </div>
+                                    <div class="panel-sub-heading">Downloading Torrent</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-default btn-xsm disabled">AT</a>
+                                            <a href="#" class="btn btn-default btn-xsm disabled">PM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-blue card-label"> </span>
+                                    </div>
+                                    <div class="panel-sub-heading">Scraping Data</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="text-right">
+                                            <a href="#" class="btn btn-default btn-xsm disabled">ND</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+<!--
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"> <i class="text-warning fa fa-circle-o"> </i> Featured Courses</div>
+                    <div class="panel-body">
+                        <ul id="sortable2" class="connectedSortable list-unstyled">
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-red card-label"> </span>
+                                        <span class="card-label-blue card-label"> </span>
+                                        <span class="card-label-green card-label">  </span>
+                                    </div>
+                                    <div class="panel-sub-heading">REST API</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-green card-label">  </span>
+                                    </div>
+                                    <div class="panel-sub-heading">Package Upgrade</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-red card-label"> </span>
+                                    </div>
+                                    <div class="panel-sub-heading">Package Downgrade</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                                <div class="panel panel-default">
+                                    <div class="panel-label-container">
+                                        <span class="card-label-blue card-label"> </span>
+                                    </div>
+                                    <div class="panel-sub-heading">Tinker with Android</div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+ -->
+
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(function() {
+            $("#sortable, #sortable2").sortable({
+                connectWith: ".connectedSortable",
+                placeholder: "no-panel-item-placeholder"
+            }).disableSelection();
+        });
+    </script>
+</body>
+
+</html>
