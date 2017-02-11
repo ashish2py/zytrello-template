@@ -61,7 +61,7 @@ img .login-avatar{
 
 .btn-muted{
     background-color: #e0e0e0;
-    color: #222222;
+    color: #5a5a5a;
 }
 
 .modal-close{
@@ -72,4 +72,20 @@ img .login-avatar{
 
 .control-label{
     color: #222;
+}
+
+.btn-dotted{
+    border-style: dotted ;
+    border-color: #b5b5b5;
+    border-width: 2px;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    line-height: 0.8 !important;
+    padding: 5.5px 10px !important;
+    box-shadow: none;
+}
+
+
+.disabled {
+    opacity: 0.4 !important;
 }
