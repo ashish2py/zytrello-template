@@ -111,3 +111,22 @@
     line-height: 1.5;
     font-weight: 800;
 }
+
+
+#panel-list-container{
+    min-width: 270px;
+    margin: 0 5px;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+
+#panel-list-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space:nowrap
+}

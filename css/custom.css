@@ -58,3 +58,18 @@ img .login-avatar{
     border-radius: 50%;
 }
 /* end of login css */
+
+.btn-muted{
+    background-color: #e0e0e0;
+    color: #222222;
+}
+
+.modal-close{
+    font-size: 5em;
+    font-weight: 100;
+}
+
+
+.control-label{
+    color: #222;
+}
