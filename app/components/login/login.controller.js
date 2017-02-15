@@ -26,8 +26,7 @@
 								"required": error_text.password_required
 							}
 			}
-			var login_validator = validator.get(validation_rule);
-
+			
 			//Display error
 			var _show_error = function(errors){			
 				//Parameter and scope variable
@@ -54,7 +53,7 @@
 
 			$scope.performLogin = function(loginForm){
 				//If not vaild return
-				var errors = login_validator.validate($scope)
+				var errors = validator.validate(validation_rule, $scope)
 				if(!angular.equals(errors, {})){
 					_show_error(errors);
 					return;

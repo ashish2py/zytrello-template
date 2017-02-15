@@ -1,0 +1,25 @@
+{
+  "name": "zytrello-template",
+  "version": "1.0.0",
+  "description": "Curate and learning platform",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashish2py/zytrello-template.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/ashish2py/zytrello-template/issues"
+  },
+  "homepage": "https://github.com/ashish2py/zytrello-template#readme"
+}

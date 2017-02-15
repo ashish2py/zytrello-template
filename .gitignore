@@ -1,2 +1,4 @@
 bower_components
 node_modules
+app/assets/js/app.min.js
+app/assets/js/vendor.min.js

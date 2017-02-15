@@ -40,7 +40,6 @@
 							}
 
 			}
-			var signup_validator = validator.get(validation_rule);
 
 			//Display error
 			var _show_error = function(errors){			
@@ -70,7 +69,7 @@
 
 			$scope.performSignUp = function(loginForm){
 				//If not vaild return
-				var errors = signup_validator.validate($scope)
+				var errors = validator.validate(validation_rule, $scope)
 				if(!angular.equals(errors, {})){
 					_show_error(errors);
 					return;

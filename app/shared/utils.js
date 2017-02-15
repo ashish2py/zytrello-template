@@ -1,106 +1,94 @@
-(function(){
-	//Validator class
-	class Validator {
-		constructor(validation_rules){
-			//Rules list
-			this.valid_rules = ['required', 'match', 'min']
+(function() {
 
-			this.validation_rules = validation_rules;
-		}
+    // Validator Module
+    angular.module('validator', [])
+        .service("validator", function() {
+            var serviceValidator = this;
 
-		//Validate property in object according to rules
-		validate(object){
-			var errors = {}
+            //Valid rules
+            valid_rules = ['required', 'match', 'min'];
 
-			//Vaidate each property
-			for(var var_name in this.validation_rules){
-				var rules = this.validation_rules[var_name];
-				
-				for (var rule in rules) {					
-					/*
-					*	Check if rule is complex rule eg:- "match_pass1_pass2"
-					* 			if complex then break rule and call appropriate method.
-					* 	Else if simple rule:
-					* 		then call validate for that rule.
-					*/
-					var is_valid=false;
-					if(rule.indexOf('_')>-1){
-						var tokens = rule.split('_');
-						
-						if(this.valid_rules.indexOf(tokens[0]) == -1){
-							throw TypeError("'"+tokens[0]+"' is not vaild rule");
-						}
-						var func_name = "validate_"+tokens[0];
-						is_valid = this[func_name](object, tokens.splice(1), var_name);	
-					}else{
-						if(this.valid_rules.indexOf(rule) == -1){
-							throw TypeError("'"+rule+"' is not vaild rule for '"+var_name+"'");
-						}
-						var func_name = "validate_"+rule;
-						is_valid = this[func_name](object, var_name);
-					}
+            //Cant be null or empty
+            this.validate_required = function(object, var_name) {
+                return object[var_name] != null && object[var_name].trim() != '';
+            }
 
-					// Add error
-					if(!is_valid){
-						if(!errors.hasOwnProperty(var_name)){
-							errors[var_name] = [rules[rule]];
-						}else{
-							errors[var_name].push(rules[rule]);
-						}
-						
-					}
-				}
-			}
+            //All must have same value
+            this.validate_match = function(object, variable, var_name) {
+                var value = null;
+                for (var i = 0; i < variable.length; i++) {
+                    if (value == null) {
+                        value = object[variable[i]];
+                    } else if (value !== object[variable[i]]) {
+                        return false;
+                    }
+                }
+                return true;
+            }
 
-			return errors;
-		}
+            //Min size
+            this.validate_min = function(object, size, var_name) {
+                var size = size[0];
+                var value = object[var_name];
+                //If null return true (it can be optional)
+                if (value == null) {
+                    return true;
+                }
+                // Validate
+                if (typeof value == "string") {
+                    return value.length >= size;
+                } else if (typeof value == "number") {
+                    return value >= size;
+                }
+                return false;
+            }
 
-		//Cant be null or empty
-		validate_required(object, var_name){
-			return object[var_name] != null && object[var_name].trim() != '';
-		}
+            var validator = {};
+            validator.validate = function(validation_rules, object) {
+                var errors = {}
 
-		//All must have same value
-		validate_match(object, variable, var_name){
-			var value=null;
-			for (var i = 0; i < variable.length; i++) {
-				if(value==null){
-					value = object[variable[i]];
-				}
-				else if(value !== object[variable[i]]){
-					return false;
-				}
-			}
-			return true;
-		}
+                //Vaidate each property
+                for (var var_name in validation_rules) {
+                    var rules = validation_rules[var_name];
 
-		//Min size
-		validate_min(object, size, var_name){
-			var size = size[0];
-			var value = object[var_name];
-			//If null return true (it can be optional)
-			if(value == null){
-				return true;
-			}
-			// Validate
-			if(typeof value == "string"){
-				return value.length >= size;
-			}else if(typeof value == "number"){
-				return value >= size;
-			}
-			return false;
-		}
-	}
+                    for (var rule in rules) {
+                        /*
+                         *	Check if rule is complex rule eg:- "match_pass1_pass2"
+                         * 			if complex then break rule and call appropriate method.
+                         * 	Else if simple rule:
+                         * 		then call validate for that rule.
+                         */
+                        var is_valid = false;
+                        if (rule.indexOf('_') > -1) {
+                            var tokens = rule.split('_');
 
-	// Validator Module
-	angular.module('validator', [])
-		.service("validator", function(){
-			var validator = {};
+                            if (valid_rules.indexOf(tokens[0]) == -1) {
+                                throw TypeError("'" + tokens[0] + "' is not vaild rule");
+                            }
+                            var func_name = "validate_" + tokens[0];
+                            is_valid = serviceValidator[func_name](object, tokens.splice(1), var_name);
+                        } else {
+                            if (valid_rules.indexOf(rule) == -1) {
+                                throw TypeError("'" + rule + "' is not vaild rule for '" + var_name + "'");
+                            }
+                            var func_name = "validate_" + rule;
+                            is_valid = serviceValidator[func_name](object, var_name);
+                        }
 
-			validator.get = function(data){
-				return new Validator(data);
-			};
+                        // Add error
+                        if (!is_valid) {
+                            if (!errors.hasOwnProperty(var_name)) {
+                                errors[var_name] = [rules[rule]];
+                            } else {
+                                errors[var_name].push(rules[rule]);
+                            }
 
-			return validator;
-		});
+                        }
+                    }
+                }
+                return errors;
+            };
+            return validator;
+            
+        });
 })();
