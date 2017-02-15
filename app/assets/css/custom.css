@@ -1,0 +1,91 @@
+/* primary colors  */
+.primary-dark-color{
+    color : #11B0FF;
+}
+
+.primary-lighter-dark-color{
+    color: #F3F7F8;
+}
+
+.primary-link-color{
+    color: #65B6DA;
+}
+
+.navbar-brand, .primary-light-color{
+    color: #ffffff !important;
+}
+
+
+/* background colors  */
+.navbar-inverse, .primary-dark-background{
+    background-color:#11B0FF;
+    color: #ffffff;
+}
+
+.primary-lighter-dark-background{
+    background-color: #F3F7F8;
+}
+
+.primary-lighter-gray-background{
+    background-color: #F6F7FB;
+}
+
+.primary-light-background{
+    color: #ffffff !important;
+}
+
+
+.rounded-corner{
+    border-radius: 3px;
+}
+
+body, .primary-light-background{
+    background-color: #ffffff;
+}
+
+
+/* login panel css */
+.login-panel{
+    margin:50px 30px 50px 30px;
+    padding:10px;
+}
+
+.login-panel > .form-horizontal > .form-group{
+    margin-top: 10px;
+}
+
+img .login-avatar{
+    border-radius: 50%;
+}
+/* end of login css */
+
+.btn-muted{
+    background-color: #e0e0e0;
+    color: #5a5a5a;
+}
+
+.modal-close{
+    font-size: 5em;
+    font-weight: 100;
+}
+
+
+.control-label{
+    color: #222;
+}
+
+.btn-dotted{
+    border-style: dotted ;
+    border-color: #b5b5b5;
+    border-width: 2px;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    line-height: 0.8 !important;
+    padding: 5.5px 10px !important;
+    box-shadow: none;
+}
+
+
+.disabled {
+    opacity: 0.4 !important;
+}
